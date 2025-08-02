@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
-#define NAV 1
-#define SYM 2
+#define SYM 1
+#define NAV 2
 #define ADJ 3
 #define EXTRA 4
 
@@ -75,12 +75,29 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp Q       &kp W        &kp E       &kp R        &kp T        &kp Z    &kp U        &kp I          &kp O        &kp P          &kp BACKSPACE
+&kp TAB    &kp Q       &kp W        &kp E       &kp R        &kp T        &kp DE_Z    &kp U        &kp I          &kp O        &kp P          &kp BACKSPACE
 &kp LSHFT  &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &kp G        &kp H    &hm RCTRL J  &hm RALT K     &hm RSHFT L  &hm RGUI DE_O_UMLAUT  &kp SQT
-&kp LCTRL  &kp Y       &kp X        &kp C       &kp V        &kp B        &kp N    &kp M        &kp COMMA      &kp DOT      &kp MINUS       &kp RSHFT
+&kp LCTRL  &kp DE_Y       &kp X        &kp C       &kp V        &kp B        &kp N    &kp M        &kp COMMA      &kp DOT      &kp DE_MINUS       &kp RSHFT
                                     &kp LGUI    &mo 1        &kp SPACE    &kp RET  &lt 2 TAB    &kp BACKSPACE
             >;
         };
+
+        SYM {
+                display-name = "Sym";
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  Ü  |  *  |  (  |  )  | BKSP |
+            // | CTRL |  Ä   |  &   |  ß   |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &kp EXCL  &kp AT          &kp HASH           &kp DLLR         &kp PRCNT    &kp CARET  &kp DE_U_UMLAUT         &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR       &trans
+&trans  &kp DE_A_UMLAUT     &kp DE_SHARP_S  &hm LALT AMPS  &hm LCTRL SQT    &kp GRAVE    &kp MINUS  &hm RCTRL EQUAL  &hm RALT LBKT  &hm RSHFT RBKT        &hm RGUI BSLH  &trans
+&trans  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS         &kp LBRC       &kp RBRC              &kp PIPE       &trans
+                                  &kp LGUI           &trans           &kp SPACE    &kp RET    &trans           &trans
+            >;
+        };
+
 
         NAV {
                 display-name = "Nav";
@@ -98,21 +115,6 @@
             >;
         };
 
-        SYM {
-                display-name = "Sym";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH           &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS         &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR       &trans
-&trans  &trans    &trans          &hm LALT UP_ARROW  &hm LCTRL SQT    &kp GRAVE    &kp MINUS  &hm RCTRL EQUAL  &hm RALT LBKT  &hm RSHFT RBKT        &hm RGUI BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS         &kp LBRC       &kp RBRC              &kp PIPE       &trans
-                                  &kp LGUI           &trans           &kp SPACE    &kp RET    &trans           &trans
-            >;
-        };
 
         ADJ {
                 display-name = "System";
