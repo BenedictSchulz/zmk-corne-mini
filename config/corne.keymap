@@ -50,30 +50,72 @@
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
             mods = <(MOD_LSFT)>;
         };
+
+        ae_macro: ae_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &mo LALT &macro_tap &kp U &macro_release &mo LALT &macro_tap &kp A>;
+        };
+
+        oe_macro: oe_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &mo LALT &macro_tap &kp U &macro_tap &mo LALT &macro_tap &kp O>;
+        };
+
+        ue_macro: ue_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &mo LALT &macro_tap &kp U &macro_tap &mo LALT &macro_tap &kp U>;
+        };
+
+        sz_macro: sz_eszett {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &mo LALT &macro_tap &kp S>;
+        };
+
     };
 
     combos {
         compatible = "zmk,combos";
 
-        combo_ae_ae {
+        combo_system {
             timeout-ms = <50>;
-            key-positions = <6 2>;  // A + E
-            bindings = <&kp QZ_AE>; // Ä
+            key-positions = <13 22>;                  // A + ; (semicolon)
+            bindings = <&to SYS>;                    // Go back to Base layer
         };
-        combo_oe_oe {
+
+        combo_ae {
             timeout-ms = <50>;
-            key-positions = <2 20>;  // O + E
-            bindings = <&kp QZ_OE>; // Ö
+            key-positions = <13 3>;                  // A + E
+            bindings = <&ae_macro>;                  // ä (macro)
         };
-        combo_ue_ue {
+
+        combo_oe {
             timeout-ms = <50>;
-            key-positions = <2 18>;  // U + E
-            bindings = <&kp QZ_UE>; // Ü
+            key-positions = <9 3>;                 // O + E
+            bindings = <&oe_macro>;                  // ö (macro)
         };
+
+        combo_ue {
+            timeout-ms = <50>;
+            key-positions = <7 3>;                 // U + E
+            bindings = <&ue_macro>;                  // ü (macro)
+        };
+
         combo_sz {
             timeout-ms = <50>;
-            key-positions = <6 12>;  // S + Z
-            bindings = <&kp QZ_SZ>; // ß
+            key-positions = <14 25>;                  // S + Z
+            bindings = <&sz_macro>;                  // ß (macro)
         };
     };
 
@@ -130,10 +172,10 @@
             >;
         };
     };
-    conditional_layers {
-        sys_layer {
-            if-layers = <SYM NAV>;
-            then-layer = <SYS>;
-        };
+        conditional_layers {
+            sys_layer {
+                if-layers = <SYM NAV>;
+                then-layer = <SYS>;
+            };
     };
 };
