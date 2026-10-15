@@ -1,0 +1,84 @@
+# keymap-drawer settings for keymap-drawer/corne.svg. Redraw it after changing the keymap:
+#   pip install keymap-drawer
+#   keymap -c keymap-drawer/config.yaml parse -z config/corne.keymap > /tmp/corne.yaml
+#   keymap -c keymap-drawer/config.yaml draw /tmp/corne.yaml > keymap-drawer/corne.svg
+parse_config:
+  zmk_keycode_map:
+    # Setting this map replaces keymap-drawer's built-in one, so symbols are listed too
+    MINUS: "-"
+    EQUAL: "="
+    LBKT: "["
+    RBKT: "]"
+    LPAR: "("
+    RPAR: ")"
+    LBRC: "{"
+    RBRC: "}"
+    DQT: '"'
+    SQT: "'"
+    GRAVE: "`"
+    AMPERSAND: "&"
+    PIPE: "|"
+    LESS_THAN: "<"
+    GREATER_THAN: ">"
+    EXCL: "!"
+    STAR: "*"
+    UNDERSCORE: "_"
+    PLUS: "+"
+    BSLH: "\\"
+    SEMICOLON: ";"
+    COMMA: ","
+    DOT: "."
+    SLASH: "/"
+    LCTRL: Ctrl
+    RCTRL: Ctrl
+    LALT: Opt
+    RALT: Opt
+    LGUI: Cmd
+    RGUI: Cmd
+    LSHFT: Shift
+    RSHFT: Shift
+    SPACE: Space
+    RET: Return
+    BSPC: Bspc
+    DEL: Del
+    ESC: Esc
+    TAB: Tab
+    LEFT: "←"
+    DOWN: "↓"
+    UP: "↑"
+    RIGHT: "→"
+    PG_DN: PgDn
+    PG_UP: PgUp
+    C_BRI_DN: "Bright −"
+    C_BRI_UP: "Bright +"
+    C_PREV: "⏮ Prev"
+    C_PP: "⏯ Play"
+    C_NEXT: "⏭ Next"
+    C_MUTE: Mute
+    C_VOL_DN: "Vol −"
+    C_VOL_UP: "Vol +"
+  raw_binding_map:
+    "&kp LA(N1)": {t: WS 1, s: "⌥1"}
+    "&kp LA(N2)": {t: WS 2, s: "⌥2"}
+    "&kp LA(N3)": {t: WS 3, s: "⌥3"}
+    "&kp LA(N4)": {t: WS 4, s: "⌥4"}
+    "&kp LA(N)": {t: WS 5, s: "⌥N"}
+    "&kp LA(C)": {t: WS C, s: "⌥C"}
+    "&kp LA(TAB)": {t: WS back, s: "⌥Tab"}
+    "&kp LG(LEFT)": {t: Line start, s: "⌘←"}
+    "&kp LG(RIGHT)": {t: Line end, s: "⌘→"}
+    "&kp LG(Z)": {t: Undo, s: "⌘Z"}
+    "&kp LG(X)": {t: Cut, s: "⌘X"}
+    "&kp LG(C)": {t: Copy, s: "⌘C"}
+    "&kp LG(V)": {t: Paste, s: "⌘V"}
+    "&bt BT_SEL 0": BT 0
+    "&bt BT_SEL 1": BT 1
+    "&bt BT_SEL 2": BT 2
+    "&bt BT_SEL 3": BT 3
+    "&bt BT_CLR": BT clear
+    "&out OUT_USB": USB
+    "&out OUT_BLE": Bluetooth
+    "&bootloader": Boot
+    "&studio_unlock": Studio unlock
+draw_config:
+  dark_mode: auto
