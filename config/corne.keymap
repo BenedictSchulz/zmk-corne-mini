@@ -92,7 +92,7 @@
         compatible = "zmk,keymap";
 
         DEF {
-            display-name = "Base";
+            display-name = "0 Base";
             bindings = <
 &kp Q              &kp W             &kp E              &kp R                &kp T            &kp Y          &kp U                 &kp I              &kp O              &kp P
 &mod_left LCTRL A  &mod_left LALT S  &mod_left LGUI D   &shift_left LSHFT F  &kp G            &kp H          &shift_right RSHFT J  &mod_right RGUI K  &mod_right RALT L  &mod_right RCTRL SEMICOLON
@@ -102,7 +102,7 @@
         };
 
         SYM {
-            display-name = "Sym";
+            display-name = "1 Sym";
             bindings = <
 &kp N1     &kp N2         &kp N3     &kp N4         &kp N5      &kp N6     &kp N7            &kp N8          &kp N9    &kp N0
 &kp MINUS  &kp EQUAL      &kp LBKT   &kp LPAR       &kp LBRC    &kp RBRC   &kp RPAR          &kp RBKT        &kp DQT   &kp SQT
@@ -113,7 +113,7 @@
 
         // Inner left column and top-left row: rift workspace shortcuts (~/.config/rift/config.toml)
         NAV {
-            display-name = "Nav";
+            display-name = "2 Nav";
             bindings = <
 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N)      &kp LG(LEFT)  &kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &none
 &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LA(TAB)    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &none
@@ -123,7 +123,7 @@
         };
 
         SYS {
-            display-name = "System";
+            display-name = "3 System";
             bindings = <
 &kp C_BRI_DN  &kp C_BRI_UP    &none         &none         &none         &kp C_PREV  &kp C_PP      &kp C_NEXT    &none  &none
 &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
