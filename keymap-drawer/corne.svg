@@ -135,8 +135,8 @@ text.trans { fill: #7e8184; }
 path.combo { stroke: #7f7f7f; }
 
 }</style>
-<g transform="translate(30, 0)" class="layer-Base">
-<text x="0" y="28" class="label" id="Base">Base:</text>
+<g transform="translate(30, 0)" class="layer-0 Base">
+<text x="0" y="28" class="label" id="Base">0 Base:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -279,13 +279,13 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">Space</text>
 <a href="#Nav">
-<text x="0" y="38" class="key hold layer-activator">Nav</text>
+<text x="0" y="38" class="key hold layer-activator">2 Nav</text>
 </a></g>
 <g transform="translate(433, 224) rotate(-30.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">Return</text>
 <a href="#Sym">
-<text x="0" y="38" class="key hold layer-activator">Sym</text>
+<text x="0" y="38" class="key hold layer-activator">1 Sym</text>
 </a></g>
 <g transform="translate(498, 213) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -297,8 +297,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 331)" class="layer-Sym">
-<text x="0" y="28" class="label" id="Sym">Sym:</text>
+<g transform="translate(30, 331)" class="layer-1 Sym">
+<text x="0" y="28" class="label" id="Sym">1 Sym:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -445,8 +445,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 661)" class="layer-Nav">
-<text x="0" y="28" class="label" id="Nav">Nav:</text>
+<g transform="translate(30, 661)" class="layer-2 Nav">
+<text x="0" y="28" class="label" id="Nav">2 Nav:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -617,8 +617,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 992)" class="layer-System">
-<text x="0" y="28" class="label" id="System">System:</text>
+<g transform="translate(30, 992)" class="layer-3 System">
+<text x="0" y="28" class="label" id="System">3 System:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
