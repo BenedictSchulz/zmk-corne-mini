@@ -76,6 +76,26 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
         };
+
+        // require-prior-idle-ms keeps spaces typed mid-sentence from turning into NAV
+        nav_space: nav_space {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        sym_enter: sym_enter {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     conditional_layers {
@@ -97,7 +117,7 @@
 &kp Q              &kp W             &kp E              &kp R                &kp T            &kp Y          &kp U                 &kp I              &kp O              &kp P
 &mod_left LCTRL A  &mod_left LALT S  &mod_left LGUI D   &shift_left LSHFT F  &kp G            &kp H          &shift_right RSHFT J  &mod_right RGUI K  &mod_right RALT L  &mod_right RCTRL SEMICOLON
 &kp Z              &kp X             &kp C              &kp V                &kp B            &kp N          &kp M                 &kp COMMA          &kp DOT            &kp SLASH
-                                     &thumb_mod LALT TAB  &kp LGUI           &lt NAV SPACE    &lt SYM RET    &kp BSPC              &thumb_mod RALT ESC
+                                     &thumb_mod LALT TAB  &kp LGUI           &nav_space NAV SPACE    &sym_enter SYM RET    &kp BSPC              &thumb_mod RALT ESC
             >;
         };
 
