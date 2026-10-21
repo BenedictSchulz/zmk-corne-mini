@@ -136,7 +136,7 @@
             display-name = "2 Nav";
             bindings = <
 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N)      &kp LG(LEFT)  &kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &none
-&kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LA(TAB)    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &none
+&kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LA(TAB)    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &kp RSHFT
 &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LA(C)      &none         &none      &none      &none          &none
                         &trans      &trans      &trans         &trans        &kp DEL    &trans
             >;
